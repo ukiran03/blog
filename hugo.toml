@@ -1,0 +1,45 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Ushakiran'
+copyright = "Copyright"
+
+# theme = "mytheme"
+theme = "rewire"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+# Parameters
+[params]
+    subtitle = "Your blog subtitle goes here!"
+
+[menus]
+  [[menus.main]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 10
+
+  [[menus.main]]
+    name = 'Posts'
+    pageRef = '/posts/'
+    weight = 20
+
+  [[menus.main]]
+    name = 'Tags'
+    pageRef = '/tags/'
+    weight = 30
+
+  [[menus.main]]
+    name = 'Categories'
+    pageRef = '/categories/'
+    weight = 40
+
+  [[menus.main]]
+    name = 'Links'
+    pageRef = '/links'
+    weight = 50
+
+  [[menus.main]]
+    name = 'Resume'
+    pageRef = '/resume'
+    weight = 60

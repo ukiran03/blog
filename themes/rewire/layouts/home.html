@@ -1,0 +1,31 @@
+{{/*
+{{ define "main" }}
+  {{ .Content }}
+  {{ range site.RegularPages }}
+    <section>
+      <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+      {{ .Summary }}
+    </section>
+    {{ end }}
+    {{ end }}
+
+    */}}
+
+{{ define "main" }}
+<div class="about-container">
+    <div class="about-text">
+      <h2>Welcome to My Website!</h2>
+      <p>We're so glad you're here. Explore, learn, and enjoy all the content
+        we've put together just for you. Whether you're here to read our latest
+        blog posts, check out resources, or learn more about us, we hope you have
+        a wonderful experience!</p>
+  <p>Feel free to <a href="/contact">contact us</a> if you have any questions.</p>
+    </div>
+
+    <div class="about-image">
+      <img src="/images/musashi1.jpg" alt="Profile" />
+    </div>
+</div>
+<br/>
+{{ partial "sidebar.html" . }}
+{{ end }}

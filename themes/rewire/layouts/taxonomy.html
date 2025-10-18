@@ -1,0 +1,31 @@
+{{/* DEFAULT
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+  {{ range .Pages }}
+  <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+  {{ end }}
+  {{ end }}
+*/}}
+
+{{/* Debug
+
+  <p>Kind: {{ .Kind }}</p>
+  <p>Type: {{ .Type }}</p>
+  <p>Pages: {{ len .Pages }}</p>
+  <p>Data.Pages: {{ len .Data.Pages }}</p>
+
+  */}}
+
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{ with .Content }}{{ . }}{{ end }}
+  <ul>
+    {{ range .Pages }}
+      <li>
+        <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+        ({{ len .Pages }}) <!-- show count of posts under this term -->
+      </li>
+      {{ end }}
+  </ul>
+  {{ end }}

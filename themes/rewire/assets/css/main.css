@@ -1,0 +1,150 @@
+/* vertical scrollbar */
+html {
+  overflow-y: scroll;
+}
+
+/* VARIABLES */
+:root {
+  --bgcolor: white;
+  --fontcolor: #444;
+  --linkcolor: #00e;
+  --visitedcolor: #551a8b;
+  --precolor: #fff;
+  --prebgcolor: #000;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bgcolor: black;
+    --fontcolor: white;
+    --linkcolor: #5bf;
+    --visitedcolor: #ae5ee0;
+    --precolor: #fff;
+    --prebgcolor: #383838;
+  }
+}
+
+/* MAIN */
+body {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 10px;
+  font: 14px/1.5 monospace;
+  color: var(--fontcolor);
+  background: var(--bgcolor);
+}
+
+header {
+  border-bottom: 1px solid #222;
+  margin-bottom: 1rem;
+}
+
+footer {
+  border-top: 1px solid #222;
+  margin-top: 1rem;
+}
+
+/* Unvisited link */
+a:link {
+    text-decoration: none;
+    color: var(--linkcolor);
+}
+
+/* Visited link */
+a:visited {
+    text-decoration: none;
+    color: var(--visitedcolor);
+}
+
+/* Mouse over link */
+a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Selected link */
+a:active {
+    text-decoration: underline;
+    color: var(--visitedcolor);
+}
+g
+/* HEADINGS */
+h1, h2, h3 {
+  line-height: 1.2;
+}
+
+/* CODE */
+p > code {
+  color: var(--precolor);
+  background: var(--prebgcolor);
+  padding: 2px;
+}
+code {
+  color: var(--precolor);
+  background: var(--prebgcolor);
+  padding: 0px;
+}
+pre {
+  color: var(--precolor);
+  background: var(--prebgcolor);
+  padding: 24px;
+  overflow-x: auto;
+}
+
+/* ARTICLES <article> */
+article {
+  padding: 2px 0;
+}
+
+/* class="center" */
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* IMAGES
+<figure>
+  <img src="image.jpg" alt="A description of the image">
+  <figcaption>Image Caption</figcaption>
+</figure> */
+figcaption {
+  color: #888;
+  font: 12px/1.5 monospace;
+  text-align: center;
+}
+figure {
+  margin: auto;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+/* Footer, etc. */
+.center-text {
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Home */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-text {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
